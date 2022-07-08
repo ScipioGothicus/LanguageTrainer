@@ -14,13 +14,28 @@ public class Main {
 		
 	    Scanner scan = new Scanner(System.in);  // Create a Scanner object
 	    int seed;
+	    int correct = 0;
+	    int total = 0;
 	    
 	    while(running) {
-	    	
 		    seed = rand.nextInt(0, languageList.size());
-		    System.out.println("What is this word?: " + languageList.get(seed).getWord());
-		    String userInput = scan.nextLine();
-		    System.out.println(userInput);
+		    LanguageNode currentNode = languageList.get(seed);
+		    
+		    System.out.println("What is this word?: " + currentNode.getWord());
+		    String inputPronun = scan.nextLine();
+		    
+		    
+		    if(inputPronun.equals(currentNode.getPronunciation())) {
+		    	System.out.println("Correct!");
+		    	correct++;
+		    }
+		    else {
+		    	System.out.println("Incorrect.\nThe correct Japanese word is " + currentNode.getPronunciation());
+		    	
+		    }
+		    total++;
+		    System.out.println("Current grade: " + (correct*100)/total + "%");
+		    
 		
 	    }
 		

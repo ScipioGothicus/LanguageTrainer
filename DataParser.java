@@ -9,7 +9,7 @@ public class DataParser {
 	
 	File file;
 	
-	ArrayList<String> dataLines = new ArrayList<String >();
+	ArrayList<String> dataLines = new ArrayList<String>();
 	ArrayList<LanguageNode> languageNodes = new ArrayList<LanguageNode>();
 		
 	public DataParser(String fileName) {
