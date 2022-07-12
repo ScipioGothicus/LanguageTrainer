@@ -40,12 +40,22 @@ public class DataParser {
 			String def;
 			
 			splitStr = str.split("\\s+");
-			
-			word = splitStr[0];
-			pronun = splitStr[1];
-			def = splitStr[2];
-
-			languageNodes.add(new LanguageNode(word, pronun, def));
+			if(splitStr.length == 2) {
+				
+				word = splitStr[0];
+				pronun = splitStr[1];
+	
+				languageNodes.add(new LanguageNode(word, pronun));
+				
+			} else {
+				
+				word = splitStr[0];
+				pronun = splitStr[1];
+				def = splitStr[2];
+	
+				languageNodes.add(new LanguageNode(word, pronun, def));
+				
+			}
 		}
 		
 		return languageNodes;

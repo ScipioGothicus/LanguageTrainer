@@ -23,4 +23,3 @@
 火 hi fire
 水 mizu water
 木 ki tree
-円 yen money

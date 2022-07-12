@@ -12,9 +12,9 @@ public class LanguageNode {
 		this.definition = definition;
 	}
 	
-	public LanguageNode(String word, String definition) {
+	public LanguageNode(String word, String pronunciation) {
 		this.word = word;
-		this.definition = definition;
+		this.pronunciation = pronunciation;
 	}
 	
 	
@@ -40,6 +40,10 @@ public class LanguageNode {
 	
 	public void setDefinition(String newDefinition) {
 		this.definition = newDefinition;
+	}
+	
+	public boolean hasDefinition() {
+		return definition != null;
 	}
 	
 	@Override
